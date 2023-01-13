@@ -47,6 +47,8 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
     this.logs= []
   }
   init() {}
+  config() {}
+  task({background,payload}) {}
   clear() {}
   reset() {}
   remember() {}
@@ -66,4 +68,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   track({element, actionType, persistence}) {}
   FastMouseTracker() {}
   FastTouchTracker() {}
+  /* zone is a ambiguous way to set stuff to happen .. its better to use the onload method for complex data */
+  zone() {}
+  _createZone() {}
 }
