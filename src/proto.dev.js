@@ -58,6 +58,8 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   stop() {}
   focused() {}
   absent() {}
+  /* programmable pause */
+  pause() {}
   idled() {}
   departed() {}
   _DomTimer(){}
