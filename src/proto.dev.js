@@ -67,10 +67,15 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   but i dont really wanna know anything to precise so tw methods() ? but the second is actually way more expensive */
   action() {}
   /*persistence() {}*/
-  track({element, actionType, persistence}) {}
+  track({element, actionType, persistence, deviceType}) {}
   FastMouseTracker() {}
   FastTouchTracker() {}
   /* zone is a ambiguous way to set stuff to happen .. its better to use the onload method for complex data */
-  zone() {}
+  zone({element,id,ids,elements,ref,data,event}) {}
   _createZone() {}
+  _zoneElementHelper() {}
+  _zoneEventHelper() {}
+  createEmitter({options}) {}
+  on() {}
+  removeEmitter({hard,soft}) {}
 }
