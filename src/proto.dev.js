@@ -59,4 +59,11 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   idled() {}
   departed() {}
   _DomTimer(){}
+  /* track is used to determine roughly in teh fastest way where something was clicked based on what i determine by how everyone else does it
+  but i dont really wanna know anything to precise so tw methods() ? but the second is actually way more expensive */
+  action() {}
+  /*persistence() {}*/
+  track({element, actionType, persistence}) {}
+  FastMouseTracker() {}
+  FastTouchTracker() {}
 }
