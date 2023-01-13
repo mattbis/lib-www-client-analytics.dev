@@ -35,6 +35,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   focused() {}
   absent() {}
   idled() {}
+  departed() {}
   _DomTimer(){}
   /* fingerprint */
   // now you cannot get anything but classes of type
