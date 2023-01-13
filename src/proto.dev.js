@@ -22,6 +22,15 @@ class _lwca_Finger {
   //state(..){}
 }
 
+/* the api knows roughly and api but I also really like to know if they match , or just where people are as its coooool.. and fine since its
+not precise */
+class _lwca_GeoApproximator() {
+  _getCity() {}
+  _getRegion() {}
+  _getRoughLocation() {}
+  getLocation() {} // ==> _getRoughLocation --> resolves to just hte city.. that all i really want.. 
+}
+
 /* use modern api / or fallback into one timer for no cpu */
 // a blocking event emitter would work here... 
 // however can just do it in the code where necessary..
