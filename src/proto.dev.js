@@ -82,4 +82,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   createEmitter({options}) {}
   on() {}
   removeEmitter({hard,soft}) {}
+  /* instead of their scripts doing whatever, it sends on this which only happens when action is made.. just one function */
+  // depends if theyhave some api so i dont need to include some script i have no control over.. 
+  ___actionExport() {}
 }
