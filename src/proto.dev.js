@@ -46,7 +46,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
     // it stores just the min values, and resets... however depends on the mode, and the type of the user and the service type page.. 
     this.sagg_logs= []
     // stores the sessions
-    this.sagg []
+    this.sagg= []
   }
   init() {}
   config() {}
