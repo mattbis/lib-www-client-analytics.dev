@@ -28,6 +28,8 @@ class _lwca_GeoApproximator() {
   _getCity() {}
   _getRegion() {}
   _getRoughLocation() {}
+  /* private: */
+  _getClosestLocationForCustomer() {} // this is to know roughly the best guess we have so that if the account goes mental .. we have a vector to check against.. etc... 
   getLocation() {} // ==> _getRoughLocation --> resolves to just hte city.. that all i really want.. 
 }
 
@@ -40,7 +42,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   workers= {}
   /* for the page, the only central emitters */
   registry= {}
-  handles= {}
+  run={handles:{},counts:{}}
   constructor() {
     this.c_mode= 0/* Integer: num */
     // it stores just the min values, and resets... however depends on the mode, and the type of the user and the service type page.. 
@@ -49,8 +51,16 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
     this.sagg= []
   }
   init() {}
-  config() {}
+  _task() {}
+  bg() {}
+  fg() {}
+  protocol() {}
+  _createHandles() {}
+  config({destructive,backup}) {}
+  // optimistic
   asynctee({background,payload}) {}
+  // from server in real time depending on customer or viewer
+  asyncgee({manifest,payload}) {}
   clear() {}
   reset() {}
   remember() {}
@@ -85,4 +95,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   /* instead of their scripts doing whatever, it sends on this which only happens when action is made.. just one function */
   // depends if theyhave some api so i dont need to include some script i have no control over.. 
   ___actionExport() {}
+  __get() {}
+  __send() {}
+  _backup() {}
 }
