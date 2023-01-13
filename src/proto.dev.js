@@ -50,7 +50,7 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   }
   init() {}
   config() {}
-  task({background,payload}) {}
+  asynctee({background,payload}) {}
   clear() {}
   reset() {}
   remember() {}
