@@ -42,9 +42,11 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   registry= {}
   handles= {}
   constructor() {
-    this.mode= 0/* Integer: num */
+    this.c_mode= 0/* Integer: num */
     // it stores just the min values, and resets... however depends on the mode, and the type of the user and the service type page.. 
-    this.logs= []
+    this.sagg_logs= []
+    // stores the sessions
+    this.sagg []
   }
   init() {}
   config() {}
@@ -62,6 +64,8 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   pause() {}
   idled() {}
   departed() {}
+  /* time is the amount of time they are viewing the page before they left it .. and when they came back etc */
+  time() {}
   _DomTimer(){}
   /* track is used to determine roughly in teh fastest way where something was clicked based on what i determine by how everyone else does it
   but i dont really wanna know anything to precise so tw methods() ? but the second is actually way more expensive */
