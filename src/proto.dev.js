@@ -10,7 +10,9 @@ const lwwwca_InitDate= Date.now()
 function __lwca_getRuntimeJsEnv() {}
 
 /* use modern api / or fallback into one timer for no cpu */
-class _lwca_ViewTimeHelper {
+// a blocking event emitter would work here... 
+// however can just do it in the code where necessary..
+class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   MODES= {}
   /* cannot block must use this instead : with manifest for track type */
   workers= {}
@@ -24,11 +26,12 @@ class _lwca_ViewTimeHelper {
   }
   init() {}
   clear() {}
+  reset() {}
   remember() {}
   _LegacyTimer() {}
   _legacyTimerClearHandle() {}
-  start(handle)
-  stop()
+  start(handle) {}
+  stop() {}
   focused() {}
   absent() {}
   idled() {}
