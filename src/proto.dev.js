@@ -42,7 +42,8 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   workers= {}
   /* for the page, the only central emitters */
   registry= {}
-  run={handles:{},counts:{}}
+  // part of this is to stop doing stupid stuff to clients.. 
+  run={handles:{bg:{},fg:{}},counts:{init,send,get}}
   constructor() {
     this.c_mode= 0/* Integer: num */
     // it stores just the min values, and resets... however depends on the mode, and the type of the user and the service type page.. 
