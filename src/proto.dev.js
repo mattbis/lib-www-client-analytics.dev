@@ -38,21 +38,31 @@ class _lwca_GeoApproximator() {
 // however can just do it in the code where necessary..
 class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   MODES= {}
+  DEFAULT= {
+  track:{},
+  send:{},
+  registry:{},
+  pending:{}}
   /* cannot block must use this instead : with manifest for track type */
   workers= {}
   /* for the page, the only central emitters */
   registry= {}
   // part of this is to stop doing stupid stuff to clients.. 
   run={handles:{bg:{},fg:{}},counts:{init,send,get}}
+  flaggs= {}
   constructor() {
+    this.c_el= {}
     this.c_mode= 0/* Integer: num */
     // it stores just the min values, and resets... however depends on the mode, and the type of the user and the service type page.. 
     this.sagg_logs= []
     // stores the sessions
     this.sagg= []
+    this.flaggs= {}
   }
-  init() {}
+  init() {
+  }
   _task() {}
+  _element() {}
   bg() {}
   fg() {}
   protocol() {}
@@ -63,7 +73,10 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   // from server in real time depending on customer or viewer
   asyncgee({manifest,payload}) {}
   clear() {}
-  reset() {}
+  reset() {
+    _resetCache() {}
+    _resetFlags() {}
+  }
   remember() {}
   _LegacyTimer() {}
   _legacyTimerClearHandle() {}
