@@ -9,6 +9,19 @@ const lwwwca_InitDate= Date.now()
 /* determine available libraries for viewTimeHelper Resolution */
 function __lwca_getRuntimeJsEnv() {}
 
+class _lwca_Finger {
+  /* fingerprint */
+  // now you cannot get anything but classes of type
+  //fingerprint(resolution= ..3) {}
+    // 0.. the os and browser
+    // 1.. the location if its reported
+    // 2.. im not sure i need anything else.. 
+  /* type= .. 3 */
+  //mixin
+  //get(..){}
+  //state(..){}
+}
+
 /* use modern api / or fallback into one timer for no cpu */
 // a blocking event emitter would work here... 
 // however can just do it in the code where necessary..
@@ -37,14 +50,4 @@ class _lwca_ViewTimeHelper /* extends ConfigurableEventEmitter */ {
   idled() {}
   departed() {}
   _DomTimer(){}
-  /* fingerprint */
-  // now you cannot get anything but classes of type
-  //fingerprint(resolution= ..3) {}
-    // 0.. the os and browser
-    // 1.. the location if its reported
-    // 2.. im not sure i need anything else.. 
-  /* type= .. 3 */
-  //mixin
-  //get(..){}
-  //state(..){}
 }
